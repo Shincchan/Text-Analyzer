@@ -13,7 +13,7 @@ export default function Textform(props) {
      const reset=()=>{
         
         setText("");
-        props.showAlert('success','Text Has Been Reseted')
+        props.showAlert('success','Text Has Been Resetted')
      }
     const handelOnChange=(event)=>{
         setText(event.target.value);

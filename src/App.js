@@ -1,14 +1,14 @@
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/Textform';
 import React, {useState} from 'react'
 import Alert from './components/Alert';
 
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState('light');
@@ -45,15 +45,15 @@ const toggle=()=>{
       <Alert alert={alert} />
       
       <div className="container" >
-        
-      <Routes>
+      <TextForm mode={mode} heading="Enter the text to analyze" showAlert={showAlert} />
+      {/* <Routes>
          
             
           <Route   path="/" element={ <TextForm mode={mode} heading="Enter the text to analyze" showAlert={showAlert} />}/>
           <Route   path="about" element={<About/>} />
            
          
-      </Routes>
+      </Routes> */}
         
         
        
