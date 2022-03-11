@@ -48,9 +48,10 @@ const toggle=()=>{
       {/* <TextForm mode={mode} heading="Enter the text to analyze" showAlert={showAlert} /> */}
       <Routes>
          
+          <Route exact  path="/Text-Analyzer" element={ <TextForm mode={mode} heading="Enter the text to analyze" showAlert={showAlert} />}/>
             
-          <Route   path="/" element={ <TextForm mode={mode} heading="Enter the text to analyze" showAlert={showAlert} />}/>
-          <Route   path="about" element={<About/>} />
+          <Route exact  path="/" element={ <TextForm mode={mode} heading="Enter the text to analyze" showAlert={showAlert} />}/>
+          <Route  exact  path="about" element={<About/>} />
            
          
       </Routes>
