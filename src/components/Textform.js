@@ -32,7 +32,7 @@ export default function Textform(props) {
     </div>
     <div className="container my-4"  style={{color:props.mode==='dark'?'white':'black'}}>
         <h2>Text Summary</h2>
-        <p><b>Words:- </b>{(text.split(" ").filter((a)=>{return a.length!==0;})).length}</p>
+        <p><b>Words:- </b>{(text.split(/\s+/).filter((a)=>{return a.length!==0;})).length}</p>
         <p><b>Characters:- </b>{text.length}</p> 
         <h2>Preview</h2>
         <p className='my-2'>{text.length>0 ?text:'Enter Some Text In TextBox To Preview'}</p>
