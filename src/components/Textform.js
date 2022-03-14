@@ -18,6 +18,10 @@ export default function Textform(props) {
     const handelOnChange=(event)=>{
         setText(event.target.value);
     }
+
+    const handelSpace=()=>{
+        setText(text.trim().split(/\s+/).join(" "));
+    }
     
   return (
     <>
@@ -28,6 +32,8 @@ export default function Textform(props) {
         </div>
         <button type="button" className="btn btn-primary mx-2 my-4" onClick={handelUpClick}>Convert to Uppercase</button>
         <button type="button" className="btn btn-primary mx-2 my-4" onClick={handelloClick}>Convert to Lowercase</button>
+        <button type="button" className="btn btn-primary mx-2 my-4" onClick={handelSpace}>Remove ExtraSpaces</button>
+
         <button type="reset" className="btn btn-primary mx-2 my-4" onClick={reset}>Reset</button>
     </div>
     <div className="container my-4"  style={{color:props.mode==='dark'?'white':'black'}}>
