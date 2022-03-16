@@ -11,9 +11,9 @@ export default function Textform(props) {
         setText(newText);
      }
      const reset=()=>{
-        
+       if(text.length>0){ 
         setText("");
-        props.showAlert('success','Text Has Been Resetted')
+        props.showAlert('success','Text Has Been Resetted')}
      }
     const handelOnChange=(event)=>{
         setText(event.target.value);
@@ -40,6 +40,8 @@ export default function Textform(props) {
         <h2>Text Summary</h2>
         <p><b>Words:- </b>{(text.split(/\s+/).filter((a)=>{return a.length!==0;})).length}</p>
         <p><b>Characters:- </b>{text.length}</p> 
+        <p><b>Reading time Required:- </b>{Math.ceil(((text.split(/\s+/).filter((a)=>{return a.length!==0;})).length)*0.2)}sec</p> 
+
         <h2>Preview</h2>
         <p className='my-2'>{text.length>0 ?text:'Enter Some Text In TextBox To Preview'}</p>
     </div>
